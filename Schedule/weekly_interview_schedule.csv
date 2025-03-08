@@ -1,0 +1,47 @@
+Interviewee First Name,Interviewee Last Name,Interviewee Email ID,Interviewee Roll Number,Interviewee Department,Interview Date,Interview Time,Additional Person 1,Additional Person 2,Additional Person 3
+Frank,Smith,xcraftzg@gmail.com,BIO-8705,Biotechnology,10-03-2025,Monday 10:30AM-11:30AM,Eve Davis,Eve Miller,Frank Williams
+Jane,Smith,xcraftzg@gmail.com,BIO-8413,Biotechnology,10-03-2025,Monday 11:30AM-12:30PM,Eve Miller,John Brown,Eve Smith
+Bob,Garcia,xcraftzg@gmail.com,DAT-8867,Data Science,10-03-2025,Monday 12:30PM-2PM,Charlie Johnson,Eve Miller,John Brown
+John,Johnson,xcraftzg@gmail.com,ELE-5769,Electronics,10-03-2025,Monday 2PM-3:30PM,John Brown,Eve Smith,Frank Williams
+Eve,Williams,xcraftzg@gmail.com,ELE-2932,Electronics,10-03-2025,Monday 3:30PM-5PM,Jane Miller,Frank Davis,Frank Davis
+Eve,Miller,xcraftzg@gmail.com,ELE-2259,Electrical Engineering,10-03-2025,Monday 5:30PM-7:00PM,Jane Miller,Frank Davis,Frank Johnson
+Charlie,Smith,xcraftzg@gmail.com,CHE-9860,Chemical Engineering,11-03-2025,Tuesday 10:30AM-11:30AM,Frank Williams,Jane Miller,Frank Johnson
+Charlie,Jones,xcraftzg@gmail.com,ROB-3055,Robotics,11-03-2025,Tuesday 11:30AM-12:30PM,Jane Smith,Frank Davis,Frank Davis
+Alice,Smith,xcraftzg@gmail.com,ELE-1623,Electrical Engineering,11-03-2025,Tuesday 2PM-3:30PM,Jane Miller,Frank Davis,Frank Johnson
+Alice,Williams,xcraftzg@gmail.com,MEC-5473,Mechanical Engineering,11-03-2025,Tuesday 5:30PM-7:00PM,Jane Miller,Frank Davis,Frank Davis
+Jane,Williams,xcraftzg@gmail.com,ROB-2514,Robotics,11-03-2025,Tuesday 7PM-8:30PM,Frank Davis,Frank Davis,Frank Johnson
+Frank,Williams,xcraftzg@gmail.com,MEC-2053,Mechanical Engineering,12-03-2025,Wednesday 11:30AM-12:30PM,Frank Davis,Jane Johnson,Diana Brown
+Charlie,Davis,xcraftzg@gmail.com,DAT-8264,Data Science,12-03-2025,Wednesday 9:30AM-10:30AM,Frank Johnson,Jane Johnson,Eve Williams
+Frank,Davis,xcraftzg@gmail.com,CHE-5861,Chemical Engineering,13-03-2025,Thursday 10:30AM-11:30AM,Diana Brown,Charlie Jones,Charlie Garcia
+Jane,Miller,xcraftzg@gmail.com,MEC-3509,Mechanical Engineering,13-03-2025,Thursday 11:30AM-12:30PM,Eve Williams,Jane Miller,Bob Davis
+Frank,Williams,xcraftzg@gmail.com,ELE-6097,Electrical Engineering,13-03-2025,Thursday 12:30PM-2PM,Eve Garcia,Alice Smith,Alice Williams
+Jane,Smith,xcraftzg@gmail.com,COM-9406,Computer Science,13-03-2025,Thursday 2PM-3:30PM,Charlie Jones,Eve Brown,Bob Davis
+Alice,Williams,xcraftzg@gmail.com,CHE-1654,Chemical Engineering,13-03-2025,Thursday 3:30PM-5PM,Charlie Jones,Jane Miller,Alice Smith
+Alice,Garcia,xcraftzg@gmail.com,MEC-9899,Mechanical Engineering,13-03-2025,Thursday 5:30PM-7:00PM,Diana Brown,Diana Brown,Eve Williams
+Diana,Garcia,xcraftzg@gmail.com,CIV-7155,Civil Engineering,13-03-2025,Thursday 9:30AM-10:30AM,Diana Brown,Jane Miller,Alice Smith
+Frank,Smith,xcraftzg@gmail.com,ELE-1811,Electrical Engineering,14-03-2025,Friday 10:30AM-11:30AM,Alice Smith,Charlie Jones,Bob Davis
+Diana,Brown,xcraftzg@gmail.com,CIV-4977,Civil Engineering,14-03-2025,Friday 11:30AM-12:30PM,John Garcia,Bob Davis,Alice Smith
+Diana,Miller,xcraftzg@gmail.com,ROB-5488,Robotics,14-03-2025,Friday 12:30PM-2PM,Charlie Garcia,Alice Miller,Diana Johnson
+Jane,Johnson,xcraftzg@gmail.com,ART-4122,Artificial Intelligence,14-03-2025,Friday 9:30AM-10:30AM,Alice Smith,Charlie Jones,John Garcia
+Charlie,Brown,xcraftzg@gmail.com,ELE-2128,Electronics,15-03-2025,Saturday 10:00PM-11:30PM,,,
+Charlie,Miller,xcraftzg@gmail.com,ROB-6528,Robotics,15-03-2025,Saturday 10:30AM-11:30AM,,,
+Diana,Brown,xcraftzg@gmail.com,ROB-6783,Robotics,15-03-2025,Saturday 11:30AM-12:30PM,,,
+Bob,Jones,xcraftzg@gmail.com,COM-2531,Computer Science,15-03-2025,Saturday 11:30PM-1:00AM,,,
+Frank,Garcia,xcraftzg@gmail.com,DAT-2350,Data Science,15-03-2025,Saturday 12:30PM-2PM,,,
+Charlie,Johnson,xcraftzg@gmail.com,BIO-1587,Biotechnology,15-03-2025,Saturday 2PM-3:30PM,,,
+Bob,Brown,xcraftzg@gmail.com,ELE-7187,Electronics,15-03-2025,Saturday 3:30PM-5PM,,,
+Diana,Johnson,xcraftzg@gmail.com,ELE-7001,Electronics,15-03-2025,Saturday 5:30PM-7:00PM,,,
+Eve,Garcia,xcraftzg@gmail.com,DAT-6204,Data Science,15-03-2025,Saturday 7PM-8:30PM,,,
+Charlie,Garcia,xcraftzg@gmail.com,ART-6232,Artificial Intelligence,15-03-2025,Saturday 8:30PM-10:00PM,,,
+Eve,Garcia,xcraftzg@gmail.com,ART-5457,Artificial Intelligence,15-03-2025,Saturday 9:30AM-10:30AM,,,
+Jane,Smith,xcraftzg@gmail.com,ELE-3915,Electrical Engineering,16-03-2025,Sunday 10:00PM-11:30PM,,,
+Frank,Johnson,xcraftzg@gmail.com,ART-9678,Artificial Intelligence,16-03-2025,Sunday 10:30AM-11:30AM,,,
+Diana,Brown,xcraftzg@gmail.com,ROB-3399,Robotics,16-03-2025,Sunday 11:30AM-12:30PM,,,
+John,Brown,xcraftzg@gmail.com,COM-7076,Computer Science,16-03-2025,Sunday 11:30PM-1:00AM,,,
+Bob,Johnson,xcraftzg@gmail.com,CIV-4688,Civil Engineering,16-03-2025,Sunday 12:30PM-2PM,,,
+Frank,Smith,xcraftzg@gmail.com,MEC-5633,Mechanical Engineering,16-03-2025,Sunday 2PM-3:30PM,,,
+Diana,Smith,xcraftzg@gmail.com,ELE-4344,Electrical Engineering,16-03-2025,Sunday 3:30PM-5PM,,,
+John,Brown,xcraftzg@gmail.com,CHE-2772,Chemical Engineering,16-03-2025,Sunday 5:30PM-7:00PM,,,
+Eve,Brown,xcraftzg@gmail.com,MEC-2135,Mechanical Engineering,16-03-2025,Sunday 7PM-8:30PM,,,
+John,Brown,xcraftzg@gmail.com,DAT-7929,Data Science,16-03-2025,Sunday 8:30PM-10:00PM,,,
+Bob,Davis,xcraftzg@gmail.com,CHE-1819,Chemical Engineering,16-03-2025,Sunday 9:30AM-10:30AM,,,
