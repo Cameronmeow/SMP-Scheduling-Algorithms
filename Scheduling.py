@@ -7,13 +7,18 @@ logging.basicConfig(filename='schedule_log.txt', level=logging.INFO, format='%(a
 
 weekend_time_slots_sat = [
     "Saturday 9:30AM-10:30AM", "Saturday 10:30AM-11:30AM", "Saturday 11:30AM-12:30PM",
-    "Saturday 12:30PM-2PM", "Saturday 2PM-3:30PM", "Saturday 3:30PM-5PM", "Saturday 5:30PM-7:00PM", "Saturday 7PM-8:30PM","Saturday 8:30PM-10:00PM","Saturday 10:00PM-11:30PM","Saturday 11:30PM-1:00AM"
+    "Saturday 12:30PM-2PM", "Saturday 2PM-3:30PM", "Saturday 3:30PM-5PM", 
+    "Saturday 5:30PM-7:00PM", "Saturday 7PM-8:30PM", "Saturday 8:30PM-10:00PM",
+    "Saturday 10:00PM-11:30PM", "Saturday 11:30PM-1:00AM"
 ]
 
 weekend_time_slots_sun = [
     "Sunday 9:30AM-10:30AM", "Sunday 10:30AM-11:30AM", "Sunday 11:30AM-12:30PM",
-    "Sunday 12:30PM-2PM", "Sunday 2PM-3:30PM", "Sunday 3:30PM-5PM", "Sunday 5:30PM-7:00PM", "Sunday 7PM-8:30PM","Sunday 8:30PM-10:00PM","Sunday 10:00PM-11:30PM","Sunday 11:30PM-1:00AM"
+    "Sunday 12:30PM-2PM", "Sunday 2PM-3:30PM", "Sunday 3:30PM-5PM", 
+    "Sunday 5:30PM-7:00PM", "Sunday 7PM-8:30PM", "Sunday 8:30PM-10:00PM",
+    "Sunday 10:00PM-11:30PM", "Sunday 11:30PM-1:00AM"
 ]
+
 def load_data(file_path):
     """Load the dataset and filter relevant columns."""
     try:
@@ -52,7 +57,6 @@ def assign_interview_slots(filtered_data, time_slots, start_date):
         while not assigned_slot and current_date <= end_date:
             day_of_week = current_date.strftime("%A")
             if day_of_week in ['Saturday', 'Sunday']:
-                
                 available_slots = weekend_time_slots_sat if day_of_week == 'Saturday' else weekend_time_slots_sun
             else:
                 available_slots = [slot for slot in time_slots if day_of_week in slot and candidate[slot] == 1]
@@ -70,7 +74,7 @@ def assign_interview_slots(filtered_data, time_slots, start_date):
                 current_date += timedelta(days=1)
 
         if assigned_slot:
-            # Find up to 3 additional people available in the same slot
+            # Find up to 3 additional people available in the same slot (only for weekdays)
             if assigned_date.strftime("%A") not in ['Saturday', 'Sunday']:
                 additional_attendees = filtered_data[
                     (filtered_data[assigned_slot] == 1) &
@@ -89,13 +93,17 @@ def assign_interview_slots(filtered_data, time_slots, start_date):
                 "Interview Date": assigned_date,
                 "Interview Time": assigned_slot,
                 "Additional Person 1": None,
+                "Additional Person 1 Email": None,
                 "Additional Person 2": None,
+                "Additional Person 2 Email": None,
                 "Additional Person 3": None,
+                "Additional Person 3 Email": None,
             }
 
             # Add up to 3 additional attendees to the entry (only for weekdays)
             for i, (_, attendee) in enumerate(additional_attendees.iterrows(), start=1):
                 entry[f"Additional Person {i}"] = f"{attendee['First Name']} {attendee['Last Name']}"
+                entry[f"Additional Person {i} Email"] = attendee["Email ID"]
 
             # Mark the slot as used for the assigned date
             used_slots[assigned_date].add(assigned_slot)
@@ -106,7 +114,6 @@ def assign_interview_slots(filtered_data, time_slots, start_date):
             logging.warning(f"Could not schedule interview for {candidate['First Name']} {candidate['Last Name']}")
 
     return pd.DataFrame(schedule)
-
 
 def save_schedule(schedule_df, output_file):
     """Save the interview schedule to a CSV file."""
