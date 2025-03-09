@@ -79,7 +79,10 @@ weekday_interviewers = {
 }
 
 def load_data(file_path):
-    """Load the dataset and filter relevant columns."""
+    """Load the dataset and filter relevant columns.
+    
+    Note: Candidates with 'Interview Happened' equal to 1 are excluded.
+    """
     try:
         data = pd.read_excel(file_path)
         # Identify weekday time slots from the dataset columns
