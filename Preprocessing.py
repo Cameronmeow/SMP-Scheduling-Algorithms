@@ -7,7 +7,7 @@ import sys
 sys.stdout = open('output.txt', 'w')
 
 # Read the Excel file
-data = pd.read_excel('Sample Form Responses.xlsx', engine='openpyxl')
+data = pd.read_excel('Form Responses.xlsx', engine='openpyxl')
 
 # Define all possible time slots for each day
 time_slots = [
@@ -17,8 +17,8 @@ time_slots = [
 
 # Initialize the new DataFrame
 columns = (
-    ["First Name", "Last Name", "Email ID", "Roll Number","Department","Interview Happened"] +
-    ["smpc1", "smpc2"] + 
+    ["First Name", "Last Name", "Email ID", "Roll Number","Contact Number","Department","Interview Happened"] +
+    ["Amritansh", "Sara","Hridyansh"] + 
     [f"{day} {slot}" for day in ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"] for slot in time_slots]
 )
 new_df = pd.DataFrame(columns=columns)
@@ -38,14 +38,17 @@ for index, row in data.iterrows():
     email_id = row.get("Email ID", "")
     roll_number = row.get("Roll Number", "")
     department = row.get("Department", "")
+    contact = row.get("Contact Number", "")
 
     # Initialize a dictionary with personal details
     row_data = {
         "First Name": first_name,
         "Last Name": last_name,
         "Email ID": email_id,
-        "smpc1": "",
-        "smpc2": "",
+        "Contact Number": contact,
+        "Amritansh": "",
+        "Sara": "",
+        "Hridyansh": "",
         "Interview Happened": 0,
         "Roll Number": roll_number,
         "Department": department
@@ -56,8 +59,9 @@ for index, row in data.iterrows():
         row_data.update(create_slot_availability(row, day))
     
     # Add placeholder values for smpc1, smpc2, and smpc3
-    row_data["smpc1"] = ""
-    row_data["smpc2"] = ""
+    row_data["Amritansh"] = ""
+    row_data["Sara"] = ""
+    row_data["Hridyansh"] = ""
     row_data["Interview Happened"] = 0
     processed_data.append(row_data)
 
@@ -89,7 +93,7 @@ wb.save('test_with_colors.xlsx')
 
 # Prepare the final DataFrame
 columns_to_keep = (
-    ["First Name", "Last Name", "Email ID", "Roll Number","Department", "smpc1", "smpc2","Interview Happened"] +
+    ["First Name", "Last Name", "Email ID", "Roll Number","Department","Contact Number", "Amritansh", "Sara","Hridyansh","Interview Happened"] +
     [col for col in new_df.columns if any(day in col for day in ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"])]
 )
 df_final = new_df[columns_to_keep]

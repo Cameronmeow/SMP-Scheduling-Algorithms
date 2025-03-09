@@ -1,52 +1,58 @@
-Interviewee First Name,Interviewee Last Name,Interviewee Email ID,Interviewee Roll Number,Interviewee Department,Interview Date,Interview Time,Additional Person 1,Additional Person 1 Email,Additional Person 2,Additional Person 2 Email,Additional Person 3,Additional Person 3 Email
-Jane,Smith,jane.smith@example.com,ART-7475,Artificial Intelligence,2025-03-10,Monday 10:30AM-11:30AM,Eve Miller,eve.miller@example.com,Frank Williams,frank.williams@example.com,Jane Smith,jane.smith@example.com
-Alice,Williams,alice.williams@example.com,MEC-5473,Mechanical Engineering,2025-03-10,Monday 11:30AM-12:30PM,Eve Miller,eve.miller@example.com,John Brown,john.brown@example.com,Eve Smith,eve.smith@example.com
-Alice,Garcia,alice.garcia@example.com,MEC-9899,Mechanical Engineering,2025-03-10,Monday 12:30PM-2PM,John Brown,john.brown@example.com,Jane Miller,jane.miller@example.com,Frank Davis,frank.davis@example.com
-Frank,Johnson,frank.johnson@example.com,ELE-3060,Electronics,2025-03-10,Monday 2PM-3:30PM,Eve Smith,eve.smith@example.com,Frank Williams,frank.williams@example.com,Jane Miller,jane.miller@example.com
-John,Garcia,john.garcia@example.com,DAT-2380,Data Science,2025-03-10,Monday 3:30PM-5PM,Diana Smith,diana.smith@example.com,Jane Miller,jane.miller@example.com,Frank Davis,frank.davis@example.com
-Eve,Davis,eve.davis@example.com,CIV-2953,Civil Engineering,2025-03-10,Monday 9:30AM-10:30AM,Charlie Johnson,charlie.johnson@example.com,Eve Davis,eve.davis@example.com,John Brown,john.brown@example.com
-John,Williams,john.williams@example.com,MEC-5472,Mechanical Engineering,2025-03-11,Tuesday 10:30AM-11:30AM,Frank Johnson,frank.johnson@example.com,Jane Johnson,jane.johnson@example.com,Diana Brown,diana.brown@example.com
-Frank,Williams,frank.williams@example.com,MEC-2053,Mechanical Engineering,2025-03-11,Tuesday 11:30AM-12:30PM,Jane Smith,jane.smith@example.com,Frank Davis,frank.davis@example.com,Frank Davis,frank.davis@example.com
-Jane,Smith,jane.smith@example.com,CHE-7462,Chemical Engineering,2025-03-11,Tuesday 12:30PM-2PM,Jane Miller,jane.miller@example.com,Frank Davis,frank.davis@example.com,Frank Johnson,frank.johnson@example.com
-Eve,Smith,eve.smith@example.com,ART-7398,Artificial Intelligence,2025-03-11,Tuesday 2PM-3:30PM,Jane Miller,jane.miller@example.com,Frank Davis,frank.davis@example.com,Frank Johnson,frank.johnson@example.com
-Charlie,Brown,charlie.brown@example.com,MEC-6341,Mechanical Engineering,2025-03-11,Tuesday 3:30PM-5PM,Diana Brown,diana.brown@example.com,Eve Williams,eve.williams@example.com,Charlie Jones,charlie.jones@example.com
-Alice,Jones,alice.jones@example.com,ELE-4020,Electronics,2025-03-11,Tuesday 5:30PM-7:00PM,Jane Miller,jane.miller@example.com,Frank Davis,frank.davis@example.com,Frank Davis,frank.davis@example.com
-Frank,Davis,frank.davis@example.com,BIO-6782,Biotechnology,2025-03-11,Tuesday 7PM-8:30PM,Frank Davis,frank.davis@example.com,Frank Johnson,frank.johnson@example.com,Diana Brown,diana.brown@example.com
-Frank,Williams,frank.williams@example.com,ELE-6097,Electrical Engineering,2025-03-11,Tuesday 9:30AM-10:30AM,Frank Davis,frank.davis@example.com,Diana Brown,diana.brown@example.com,Eve Williams,eve.williams@example.com
-Eve,Williams,eve.williams@example.com,ELE-2932,Electronics,2025-03-12,Wednesday 10:30AM-11:30AM,Eve Williams,eve.williams@example.com,Alice Smith,alice.smith@example.com,Bob Davis,bob.davis@example.com
-Charlie,Brown,charlie.brown@example.com,ELE-2128,Electronics,2025-03-12,Wednesday 12:30PM-2PM,Diana Brown,diana.brown@example.com,Eve Williams,eve.williams@example.com,Eve Brown,eve.brown@example.com
-Frank,Johnson,frank.johnson@example.com,ART-9678,Artificial Intelligence,2025-03-12,Wednesday 3:30PM-5PM,Charlie Jones,charlie.jones@example.com,Alice Smith,alice.smith@example.com,John Garcia,john.garcia@example.com
-John,Brown,john.brown@example.com,COM-7076,Computer Science,2025-03-12,Wednesday 7PM-8:30PM,Bob Garcia,bob.garcia@example.com,Jane Miller,jane.miller@example.com,Alice Smith,alice.smith@example.com
-Bob,Brown,bob.brown@example.com,ART-7347,Artificial Intelligence,2025-03-12,Wednesday 9:30AM-10:30AM,Eve Williams,eve.williams@example.com,Bob Garcia,bob.garcia@example.com,Jane Miller,jane.miller@example.com
-Charlie,Jones,charlie.jones@example.com,ROB-3055,Robotics,2025-03-13,Thursday 10:30AM-11:30AM,Charlie Garcia,charlie.garcia@example.com,Charlie Jones,charlie.jones@example.com,John Garcia,john.garcia@example.com
-Bob,Smith,bob.smith@example.com,BIO-3144,Biotechnology,2025-03-13,Thursday 11:30AM-12:30PM,Bob Davis,bob.davis@example.com,John Johnson,john.johnson@example.com,Charlie Miller,charlie.miller@example.com
-Charlie,Smith,charlie.smith@example.com,CHE-9860,Chemical Engineering,2025-03-13,Thursday 5:30PM-7:00PM,Charlie Jones,charlie.jones@example.com,John Garcia,john.garcia@example.com,Alice Miller,alice.miller@example.com
-Diana,Johnson,diana.johnson@example.com,ELE-7001,Electronics,2025-03-13,Thursday 9:30AM-10:30AM,Jane Miller,jane.miller@example.com,Alice Smith,alice.smith@example.com,Charlie Garcia,charlie.garcia@example.com
-Eve,Williams,eve.williams@example.com,DAT-9967,Data Science,2025-03-14,Friday 10:30AM-11:30AM,Bob Davis,bob.davis@example.com,Diana Johnson,diana.johnson@example.com,Alice Williams,alice.williams@example.com
-Bob,Johnson,bob.johnson@example.com,CIV-4688,Civil Engineering,2025-03-14,Friday 11:30AM-12:30PM,Bob Davis,bob.davis@example.com,Alice Smith,alice.smith@example.com,Diana Brown,diana.brown@example.com
-Alice,Miller,alice.miller@example.com,CIV-2567,Civil Engineering,2025-03-14,Friday 12:30PM-2PM,Charlie Garcia,charlie.garcia@example.com,Alice Miller,alice.miller@example.com,Diana Johnson,diana.johnson@example.com
-Alice,Williams,alice.williams@example.com,ELE-5721,Electronics,2025-03-14,Friday 2PM-3:30PM,Charlie Jones,charlie.jones@example.com,Alice Williams,alice.williams@example.com,Frank Smith,frank.smith@example.com
-Diana,Brown,diana.brown@example.com,ROB-3399,Robotics,2025-03-14,Friday 5:30PM-7:00PM,John Garcia,john.garcia@example.com,Diana Brown,diana.brown@example.com,Bob Davis,bob.davis@example.com
-Jane,Smith,jane.smith@example.com,BIO-8413,Biotechnology,2025-03-14,Friday 9:30AM-10:30AM,John Garcia,john.garcia@example.com,Bob Davis,bob.davis@example.com,Diana Johnson,diana.johnson@example.com
-Alice,Miller,alice.miller@example.com,ELE-4738,Electrical Engineering,2025-03-15,Saturday 10:00PM-11:30PM,,,,,,
-Frank,Brown,frank.brown@example.com,ART-3369,Artificial Intelligence,2025-03-15,Saturday 10:30AM-11:30AM,,,,,,
-Charlie,Brown,charlie.brown@example.com,DAT-9592,Data Science,2025-03-15,Saturday 11:30AM-12:30PM,,,,,,
-Charlie,Garcia,charlie.garcia@example.com,ART-6232,Artificial Intelligence,2025-03-15,Saturday 11:30PM-1:00AM,,,,,,
-Jane,Smith,jane.smith@example.com,COM-9406,Computer Science,2025-03-15,Saturday 12:30PM-2PM,,,,,,
-Diana,Smith,diana.smith@example.com,ELE-4344,Electrical Engineering,2025-03-15,Saturday 2PM-3:30PM,,,,,,
-Alice,Williams,alice.williams@example.com,ART-1908,Artificial Intelligence,2025-03-15,Saturday 3:30PM-5PM,,,,,,
-Eve,Miller,eve.miller@example.com,ELE-2259,Electrical Engineering,2025-03-15,Saturday 5:30PM-7:00PM,,,,,,
-Diana,Brown,diana.brown@example.com,COM-8592,Computer Science,2025-03-15,Saturday 7PM-8:30PM,,,,,,
-Diana,Miller,diana.miller@example.com,ROB-5488,Robotics,2025-03-15,Saturday 8:30PM-10:00PM,,,,,,
-Charlie,Johnson,charlie.johnson@example.com,ELE-9924,Electrical Engineering,2025-03-15,Saturday 9:30AM-10:30AM,,,,,,
-Jane,Smith,jane.smith@example.com,ELE-3915,Electrical Engineering,2025-03-16,Sunday 10:00PM-11:30PM,,,,,,
-Frank,Smith,frank.smith@example.com,MEC-5633,Mechanical Engineering,2025-03-16,Sunday 10:30AM-11:30AM,,,,,,
-Charlie,Johnson,charlie.johnson@example.com,ELE-5263,Electronics,2025-03-16,Sunday 11:30AM-12:30PM,,,,,,
-Diana,Garcia,diana.garcia@example.com,COM-4794,Computer Science,2025-03-16,Sunday 11:30PM-1:00AM,,,,,,
-Diana,Jones,diana.jones@example.com,DAT-5559,Data Science,2025-03-16,Sunday 12:30PM-2PM,,,,,,
-Charlie,Jones,charlie.jones@example.com,DAT-1184,Data Science,2025-03-16,Sunday 2PM-3:30PM,,,,,,
-Diana,Smith,diana.smith@example.com,ELE-9837,Electronics,2025-03-16,Sunday 3:30PM-5PM,,,,,,
-John,Jones,john.jones@example.com,CHE-8446,Chemical Engineering,2025-03-16,Sunday 5:30PM-7:00PM,,,,,,
-Bob,Garcia,bob.garcia@example.com,DAT-8867,Data Science,2025-03-16,Sunday 7PM-8:30PM,,,,,,
-Alice,Williams,alice.williams@example.com,COM-7423,Computer Science,2025-03-16,Sunday 8:30PM-10:00PM,,,,,,
-Bob,Brown,bob.brown@example.com,CHE-1131,Chemical Engineering,2025-03-16,Sunday 9:30AM-10:30AM,,,,,,
+Interviewee First Name,Interviewee Last Name,Interviewee Email ID,Interviewee Roll Number,Interviewee Department,Interviewee Contact Number,Interview Date,Interview Time,Interviewer 1,Interviewer 2,Interviewer 3,Additional Person 1,Additional Person 1 Email,Additional Person 1 Contact,Additional Person 2,Additional Person 2 Email,Additional Person 2 Contact,Additional Person 3,Additional Person 3 Email,Additional Person 3 Contact
+Yogesh,Dangi,yogesh.dangi@iitb.ac.in,22b0322,Chemical Engineering,7067503163,2025-03-10,Monday 10:30AM-11:30AM,,,,Aditya Singh,adityasinghsap28@gmail.com,9311219533.0,Varun Ram  Narayanan,22b0347@iitb.ac.in,8792051395.0,Kavya Gupta,22b1053@iitb.ac.in,7753932449.0
+Sujeet,Mehta,21d070076@iitb.ac.in,21D070076,Electrical Engineering,6367559027,2025-03-10,Monday 11:30AM-12:30PM,H,A,,Arnav Dutt Sharma,arnav.sharma@iitb.ac.in,8880030000.0,Amna Rahman,amnarahman2712@gmail.com,8910254840.0,Aditya Tadwalkar,aditadwalkar73@gmail.com,9022565843.0
+Jeeten,Makwana,22b2273@iitb.ac.in,22b2273,Mechanical Engineering,9925312099,2025-03-10,Monday 12:30PM-2PM,H,S,A,Aryan Gupta,aryangupta@iitb.ac.in,9038434974.0,Achirangshu Dakua,achirangshu2004@gmail.com,9474591609.0,Arnav Dutt Sharma,arnav.sharma@iitb.ac.in,8880030000.0
+Bhavin,Jain,22b0685@iitb.ac.in,22B0685,Civil Engineering,8799534416,2025-03-10,Monday 2PM-3:30PM,S,A,,Dhvanil  Gheewala ,22b0923@iitb.ac.in,9913783842.0,Kalpesh Khare,22b0069@iitb.ac.in,9022513006.0,Pranjal Khatod,pranjalkhatod7410@gmail.com,9307273816.0
+Mahak ,Kalra,22b0723@iitb.ac.in,22B0723,Civil Engineering,8000657709,2025-03-10,Monday 3:30PM-5PM,S,A,,Arpit Jain,arpitjain8302gmail.com,8302852341.0,Ananditha  Somannagari ,anandithas2021@gmail.com,8639630018.0,Pranjal Khatod,pranjalkhatod7410@gmail.com,9307273816.0
+Yash,Gupta,yashg1810@gmail.com,22b2151,Mechanical Engineering,8078692865,2025-03-10,Monday 7PM-8:30PM,A,S,,Aryan Gupta,aryangupta@iitb.ac.in,9038434974.0,Arnav Dutt Sharma,arnav.sharma@iitb.ac.in,8880030000.0,Gaurishankar Swain,210110045@iitb.ac.in,9861457853.0
+Akshat,Jain,22b0690@iitb.ac.in,22B0690,Energy Science and Engineering,+918128612391,2025-03-10,Monday 9:30AM-10:30AM,H,A,,Arnav Dutt Sharma,arnav.sharma@iitb.ac.in,8880030000.0,Amna Rahman,amnarahman2712@gmail.com,8910254840.0,Aditya  Parsekar ,22b0309@iitb.ac.in,9420977603.0
+Kalpesh,Khare,22b0069@iitb.ac.in,22b0069,Aerospace Engineering,9022513006,2025-03-11,Tuesday 10:30AM-11:30AM,,,,Aditya  Parsekar ,22b0309@iitb.ac.in,9420977603.0,Kalpesh Khare,22b0069@iitb.ac.in,9022513006.0,Somya Yadav,22b4522@iitb.ac.in,8700199427.0
+Mohammad Hanzala ,Ansari,mhansari1107@gmail.com ,21d170027,Energy Science and Engineering,8770525584,2025-03-11,Tuesday 11:30AM-12:30PM,H,S,,Aditya  Parsekar ,22b0309@iitb.ac.in,9420977603.0,Hari Bhavsar,22b0934@iitb.ac.in,8355812511.0,Aditya Singh,adityasinghsap28@gmail.com,9311219533.0
+Sarthak ,Kulkarni,22b0302@iitb.ac.in,22B0302,Chemical Engineering,9156875399,2025-03-11,Tuesday 12:30PM-2PM,H,S,,Kalpesh Khare,22b0069@iitb.ac.in,9022513006.0,Rajit  Khandelwal,rajitkhandelwal11@gmail.com,8720063422.0,Varun Ram  Narayanan,22b0347@iitb.ac.in,8792051395.0
+Lakshit ,Agarwal,22b0612@iitb.ac.in,22b0612,Civil Engineering,8619891959,2025-03-11,Tuesday 2PM-3:30PM,A,,,Ananditha  Somannagari ,anandithas2021@gmail.com,8639630018.0,Saima  Patharwat ,saimapatharwat@gmail.com,7498471210.0,Aman Verma,av215958@gmail.com,8302128906.0
+Advay,Sant,22b3315@iitb.ac.in,22B3315,Mathematics,8767097452,2025-03-11,Tuesday 3:30PM-5PM,,,,Kalpesh Khare,22b0069@iitb.ac.in,9022513006.0,Rajit  Khandelwal,rajitkhandelwal11@gmail.com,8720063422.0,Aditya Singh,adityasinghsap28@gmail.com,9311219533.0
+Chetan,Vijay,22b2242@iitb.ac.in,22B2242,Mechanical Engineering,9461662274,2025-03-11,Tuesday 7PM-8:30PM,H,A,,Gaurishankar Swain,210110045@iitb.ac.in,9861457853.0,Aditya Tadwalkar,aditadwalkar73@gmail.com,9022565843.0,Devesh Mittal,22b0070@iitb.ac.in,8355805193.0
+Yash,Toshniwal,22b0307@iitb.ac.in,22b0307,Mechanical Engineering,9381456793,2025-03-11,Tuesday 9:30AM-10:30AM,,,,Amna Rahman,amnarahman2712@gmail.com,8910254840.0,Gaurishankar Swain,210110045@iitb.ac.in,9861457853.0,Aditya  Parsekar ,22b0309@iitb.ac.in,9420977603.0
+Khushbu ,Sahu,22b1300@iitb.ac.in,22B1300,Electrical Engineering,8962805955,2025-03-12,Wednesday 10:30AM-11:30AM,H,A,,Aman Verma,av215958@gmail.com,8302128906.0,Somya Yadav,22b4522@iitb.ac.in,8700199427.0,Varun Kulkarni,varun.kulkarni721@gmail.com,74477116567.0
+Isha,Laddha,isha.laddha3@gmail.com,22B3920,Mechanical Engineering,9307532737,2025-03-12,Wednesday 11:30AM-12:30PM,,,,Kavya Gupta,22b1053@iitb.ac.in,7753932449.0,Aman Verma,av215958@gmail.com,8302128906.0,Varun Kulkarni,varun.kulkarni721@gmail.com,74477116567.0
+Kaushal,Khunteta,kaushalkhunteta@gmail.com,21d070036,Electrical Engineering,9351167811,2025-03-12,Wednesday 12:30PM-2PM,H,S,A,Varun Ram  Narayanan,22b0347@iitb.ac.in,8792051395.0,Ananditha  Somannagari ,anandithas2021@gmail.com,8639630018.0,Dhruv  Pamnani,dhruvpamnani1010@gmail.com,8602094123.0
+Abdul ,Qaim Ansar,22b0385@iitb.ac.in,22B0385,Chemical Engineering,7397873098,2025-03-12,Wednesday 2PM-3:30PM,H,S,A,Arpit Jain,arpitjain8302gmail.com,8302852341.0,Ananditha  Somannagari ,anandithas2021@gmail.com,8639630018.0,Dhruv  Pamnani,dhruvpamnani1010@gmail.com,8602094123.0
+Bhavesh,Tanan,bhaveshtanan319@gmail.com,22b3018,Economics,9460241654,2025-03-12,Wednesday 3:30PM-5PM,H,S,A,Saima  Patharwat ,saimapatharwat@gmail.com,7498471210.0,Pranjal Khatod,pranjalkhatod7410@gmail.com,9307273816.0,Gunjan Somani,gunjansomani.iitb@gmail.com,9326160132.0
+Harshit ,Singariya,22b2161@iitb.ac.in,22b2161,Mechanical Engineering,8962743638,2025-03-12,Wednesday 7PM-8:30PM,H,S,A,Aditya Tadwalkar,aditadwalkar73@gmail.com,9022565843.0,Devesh Mittal,22b0070@iitb.ac.in,8355805193.0,Dhvanil  Gheewala ,22b0923@iitb.ac.in,9913783842.0
+Tanmay ,Kulkarni,tanmaykulkarni452@gmail.com,22b2188,Mechanical Engineering,8380983079,2025-03-12,Wednesday 9:30AM-10:30AM,H,S,,Aditya Singh,adityasinghsap28@gmail.com,9311219533.0,Arpit Jain,arpitjain8302gmail.com,8302852341.0,Siddhi Deshpande,siddhi2244@gmail.com,7977537933.0
+Anoushka ,Singh,22b3019@iitb.ac.in,22B3019,Economics,9152243279,2025-03-13,Thursday 10:30AM-11:30AM,H,S,,Soham Dahane,22b0941@iitb.ac.in,8485078783.0,Somya Yadav,22b4522@iitb.ac.in,8700199427.0,Dileep Devarajan,dildev098@gmail.com,7400352334.0
+Saatwik ,Patnaik ,saatwik.patnaik@gmail.com,22B1284 ,Electrical Engineering,7815070860,2025-03-13,Thursday 11:30AM-12:30PM,A,,,Somya Yadav,22b4522@iitb.ac.in,8700199427.0,Ashutosh Gandhe,ashutoshgandhe49@gmail.com,9987299063.0,Maitreyee Tengshe,22b0318@iitb.ac.in,7030909443.0
+Vinayak ,Lal,vinayaklal8@gmail.com,22b2223,Computer Science & Engineering,9769738362,2025-03-13,Thursday 12:30PM-2PM,H,S,,Gunjan Somani,gunjansomani.iitb@gmail.com,9326160132.0,N V Navaneeth  Rajesh,22b1215@iitb.ac.in,9884822446.0,Soham Dahane,22b0941@iitb.ac.in,8485078783.0
+Saksham ,Garg,22b0757@iitb.ac.in,22B0757,Civil Engineering,9518101251,2025-03-13,Thursday 2PM-3:30PM,H,S,,Hari Bhavsar,22b0934@iitb.ac.in,8355812511.0,Kalpesh Khare,22b0069@iitb.ac.in,9022513006.0,Aditya Singh,adityasinghsap28@gmail.com,9311219533.0
+Swapnil ,Banthia,22b2142@iitb.ac.in,22b2142,Mechanical Engineering,9108460021,2025-03-13,Thursday 3:30PM-5PM,H,S,,N V Navaneeth  Rajesh,22b1215@iitb.ac.in,9884822446.0,Priyanshu kumar meena,22b0060@iitb.ac.in,8955271464.0,arnav dhamankar,22b0664@iitb.ac.in,9833503906.0
+Vaishnavi ,Lokery,22b2484@iitb.ac.in,22B2484,Metallurgical Engineering & Materials Science,9390852218,2025-03-13,Thursday 7PM-8:30PM,A,,,Pritam  Naskar,npritam423@gmail.com,9330322461.0,Aditya Singh,adityasinghsap28@gmail.com,9311219533.0,Arpit Jain,arpitjain8302gmail.com,8302852341.0
+Jinisha,Sabadra,jinisha.sabadra@iitb.ac.in,22b2719,Chemistry,9423283718,2025-03-13,Thursday 9:30AM-10:30AM,H,A,,Gunjan Somani,gunjansomani.iitb@gmail.com,9326160132.0,Aditya Shrungarpure ,22b0418@iitb.ac.in,9769513460.0,Somya Yadav,22b4522@iitb.ac.in,8700199427.0
+Bhavika,Zanwar,bhavikazanwar14@gmail.com,22b2479,Metallurgical Engineering & Materials Science,8530397909,2025-03-14,Friday 10:30AM-11:30AM,H,S,,Somya Yadav,22b4522@iitb.ac.in,8700199427.0,Jayveer Sikarwar ,21d070033@iitb.ac.in,8871499803.0,Deepak Silaych,deepaksilaych@iitb.ac.in,9001352750.0
+Bhavik,Yadav,bhaviksyadav@gmail.com,21d070090,Electrical Engineering,08657296008,2025-03-14,Friday 11:30AM-12:30PM,S,A,,Jayveer Sikarwar ,21d070033@iitb.ac.in,8871499803.0,Hitesh  Kumar,hiteshdharm220@gmail.com,8306640456.0,Unnati Agarwal,unnatiagarwal121@gmail.com,7895666998.0
+Gunjan,Somani,gunjansomani.iitb@gmail.com,22b2516,Metallurgical Engineering & Materials Science,9326160132,2025-03-14,Friday 12:30PM-2PM,H,S,A,Somya Yadav,22b4522@iitb.ac.in,8700199427.0,Ashutosh Gandhe,ashutoshgandhe49@gmail.com,9987299063.0,Dion  Reji,22b0029@iitb.ac.in,7907729867.0
+Karrthik ,Radhakrishnan,karrthikradhakrishnan04@gmail.com,22b2237,Mechanical Engineering,8850857896,2025-03-14,Friday 2PM-3:30PM,A,,,Aryan Arora,22b2208@iitb.ac.in,9717195520.0,Varun Kulkarni,varun.kulkarni721@gmail.com,74477116567.0,Jayveer Sikarwar ,21d070033@iitb.ac.in,8871499803.0
+Alwin ,Johnson,22b2455@iitb.ac.in,22B2455,Metallurgical Engineering & Materials Science,9653191051,2025-03-14,Friday 3:30PM-5PM,,,,Ashutosh Gandhe,ashutoshgandhe49@gmail.com,9987299063.0,Aryan Arora,22b2208@iitb.ac.in,9717195520.0,Siddharth Solanki,siddharth.solanki993@gmail.com,8209886317.0
+Shriya,Bhadane,22b2183@iitb.ac.in,22B2183,Mechanical Engineering,7588109289,2025-03-14,Friday 7PM-8:30PM,H,A,,Rajit  Khandelwal,rajitkhandelwal11@gmail.com,8720063422.0,Varun Ram  Narayanan,22b0347@iitb.ac.in,8792051395.0,Arpit Jain,arpitjain8302gmail.com,8302852341.0
+Ayush ,Agrawal,ayushlaptop77@gmail.com,22B2709,Chemistry,7709685070,2025-03-14,Friday 9:30AM-10:30AM,H,S,,Aditya Shrungarpure ,22b0418@iitb.ac.in,9769513460.0,arnav dhamankar,22b0664@iitb.ac.in,9833503906.0,Vinayak  Lal,vinayaklal8@gmail.com,9769738362.0
+Shamsher ,Raza,22b4213@iitb.ac.in,22b4213,Environmental Science and Engineering,9821808672,2025-03-15,Saturday 10:00PM-11:30PM,,,,,,,,,,,,
+Abhishek,Hazra,22b2424@iitb.ac.in,22B2424,Metallurgical Engineering & Materials Science,8240163800,2025-03-15,Saturday 10:30AM-11:30AM,,,,,,,,,,,,
+Shubham ,Agarwal,shubham2003.sa@gmail.com,22b2158,Mechanical Engineering,7980530673,2025-03-15,Saturday 11:30AM-12:30PM,,,,,,,,,,,,
+Devesh,Mittal,22b0070@iitb.ac.in,22b0070,Aerospace Engineering,8355805193,2025-03-15,Saturday 11:30PM-1:00AM,,,,,,,,,,,,
+Ronit ,Tripathy,ronittripathy2004@gmail.com,22B0325,Chemical Engineering,7978595013,2025-03-15,Saturday 12:30PM-2PM,,,,,,,,,,,,
+Yashomati,Sarnaik,22b1259@iitb.ac.in,22B1259,Electrical Engineering,7385197557,2025-03-15,Saturday 2PM-3:30PM,,,,,,,,,,,,
+Siddharth,Solanki,siddharth.solanki993@gmail.com,21d070072,Electrical Engineering,8209886317,2025-03-15,Saturday 3:30PM-5PM,,,,,,,,,,,,
+Pratik,Goswami,pratikgoswami2767@gmail.com,22B0448,Chemical Engineering,9537143126,2025-03-15,Saturday 5:30PM-7:00PM,,,,,,,,,,,,
+Sahil,Dhania,sahilpmn@gmail.com,22B0368,Chemical Engineering,8307624285,2025-03-15,Saturday 7PM-8:30PM,,,,,,,,,,,,
+Brian,Mackwan,22b0413@iitb.ac.in,22B0413,Computer Science & Engineering,8433568933,2025-03-15,Saturday 8:30PM-10:00PM,,,,,,,,,,,,
+Pritam, Naskar,npritam423@gmail.com,24N0071,Mathematics,9330322461,2025-03-15,Saturday 9:30AM-10:30AM,,,,,,,,,,,,
+Ayush ,Singh,ayushetah27@gmail.com,22B0672,Aerospace Engineering,8077563718,2025-03-16,Sunday 10:00PM-11:30PM,,,,,,,,,,,,
+Dhruv ,Pamnani,dhruvpamnani1010@gmail.com,22b0333,Chemical Engineering,8602094123,2025-03-16,Sunday 10:30AM-11:30AM,,,,,,,,,,,,
+Atharva,Jaltare,22b2189@iitb.ac.in,22b2189,Mechanical Engineering,8767287709,2025-03-16,Sunday 11:30AM-12:30PM,,,,,,,,,,,,
+Astha ,Agarwal,22b2411@iitb.ac.in,22b2411,Metallurgical Engineering & Materials Science,7037856338,2025-03-16,Sunday 11:30PM-1:00AM,,,,,,,,,,,,
+Siddhi,Deshpande,siddhi2244@gmail.com,22b4507,Mechanical Engineering,7977537933,2025-03-16,Sunday 12:30PM-2PM,,,,,,,,,,,,
+Sai Mayura ,R K,22b1283@iitb.ac.in,22B1283,Electrical Engineering,8939747471,2025-03-16,Sunday 2PM-3:30PM,,,,,,,,,,,,
+Eshani ,Malik,eshanimalik03@gmail.com,22b3009,Economics,9952999987,2025-03-16,Sunday 3:30PM-5PM,,,,,,,,,,,,
+Sharvari,Dhote,22b2149@iitb.ac.in,22b2149,Mechanical Engineering,8830244398,2025-03-16,Sunday 5:30PM-7:00PM,,,,,,,,,,,,
+Sumit,Prakash,sumitprakash@iitb.ac.in,22B3306,Mathematics,9835769283,2025-03-16,Sunday 7PM-8:30PM,,,,,,,,,,,,
+Sripradheep ,K,sripradheep2003@gmail.com,21B030035,Energy Science and Engineering,08220875387,2025-03-16,Sunday 8:30PM-10:00PM,,,,,,,,,,,,
+Vaibhav,Sureka,surekavaibhav2@gmail.com,22b3035,Economics,8486338557,2025-03-16,Sunday 9:30AM-10:30AM,,,,,,,,,,,,

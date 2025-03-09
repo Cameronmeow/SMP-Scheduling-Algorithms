@@ -3,35 +3,99 @@ from datetime import datetime, timedelta
 import logging
 
 # Configure logging
-logging.basicConfig(filename='schedule_log.txt', level=logging.INFO, format='%(asctime)s - %(message)s')
+logging.basicConfig(
+    filename='schedule_log.txt',
+    level=logging.INFO,
+    format='%(asctime)s - %(message)s'
+)
 
+# Weekend time slots remain unchanged
 weekend_time_slots_sat = [
     "Saturday 9:30AM-10:30AM", "Saturday 10:30AM-11:30AM", "Saturday 11:30AM-12:30PM",
-    "Saturday 12:30PM-2PM", "Saturday 2PM-3:30PM", "Saturday 3:30PM-5PM", 
+    "Saturday 12:30PM-2PM", "Saturday 2PM-3:30PM", "Saturday 3:30PM-5PM",
     "Saturday 5:30PM-7:00PM", "Saturday 7PM-8:30PM", "Saturday 8:30PM-10:00PM",
     "Saturday 10:00PM-11:30PM", "Saturday 11:30PM-1:00AM"
 ]
 
 weekend_time_slots_sun = [
     "Sunday 9:30AM-10:30AM", "Sunday 10:30AM-11:30AM", "Sunday 11:30AM-12:30PM",
-    "Sunday 12:30PM-2PM", "Sunday 2PM-3:30PM", "Sunday 3:30PM-5PM", 
+    "Sunday 12:30PM-2PM", "Sunday 2PM-3:30PM", "Sunday 3:30PM-5PM",
     "Sunday 5:30PM-7:00PM", "Sunday 7PM-8:30PM", "Sunday 8:30PM-10:00PM",
     "Sunday 10:00PM-11:30PM", "Sunday 11:30PM-1:00AM"
 ]
+
+# Dictionary mapping weekdays and time ranges to interviewer letters
+weekday_interviewers = {
+    "Monday": {
+         "9:30AM-10:30AM": "H, A",
+         "10:30AM-11:30AM": "",            # No interviewers
+         "11:30AM-12:30PM": "H, A",
+         "12:30PM-2PM": "H, S, A",
+         "2PM-3:30PM": "S, A",
+         "3:30PM-5PM": "S, A",
+         "5:30PM-7PM": "",                # No interviewers
+         "7PM-8:30PM": "A, S"
+    },
+    "Tuesday": {
+         "9:30AM-10:30AM": "",
+         "10:30AM-11:30AM": "",
+         "11:30AM-12:30PM": "H, S",
+         "12:30PM-2PM": "H, S",
+         "2PM-3:30PM": "A",
+         "3:30PM-5PM": "",
+         "5:30PM-7PM": "H, A",
+         "7PM-8:30PM": "H, A"
+    },
+    "Wednesday": {
+         "9:30AM-10:30AM": "H, S",
+         "10:30AM-11:30AM": "H, A",
+         "11:30AM-12:30PM": "",
+         "12:30PM-2PM": "H, S, A",
+         "2PM-3:30PM": "H, S, A",
+         "3:30PM-5PM": "H, S, A",
+         "5:30PM-7PM": "H, S, A",
+         "7PM-8:30PM": "H, S, A"
+    },
+    "Thursday": {
+         "9:30AM-10:30AM": "H, A",
+         "10:30AM-11:30AM": "H, S",
+         "11:30AM-12:30PM": "A",
+         "12:30PM-2PM": "H, S",
+         "2PM-3:30PM": "H, S",
+         "3:30PM-5PM": "H, S",
+         "5:30PM-7PM": "",
+         "7PM-8:30PM": "A"
+    },
+    "Friday": {
+         "9:30AM-10:30AM": "H, S",
+         "10:30AM-11:30AM": "H, S",
+         "11:30AM-12:30PM": "S, A",
+         "12:30PM-2PM": "H, S, A",
+         "2PM-3:30PM": "A",
+         "3:30PM-5PM": "",
+         "5:30PM-7PM": "H, A",
+         "7PM-8:30PM": "H, A"
+    }
+}
 
 def load_data(file_path):
     """Load the dataset and filter relevant columns."""
     try:
         data = pd.read_excel(file_path)
+        # Identify weekday time slots from the dataset columns
         time_slots = [col for col in data.columns if any(day in col for day in ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'])]
-        relevant_columns = ['First Name', 'Last Name', 'Email ID', 'Roll Number', 'Department', 'Interview Happened'] + time_slots
-        filtered_data = data[relevant_columns].fillna(0)  # Fill NaN values with 0
+        # Include 'Contact Number' column along with other required fields
+        relevant_columns = [
+            'First Name', 'Last Name', 'Email ID', 'Roll Number', 
+            'Department', 'Contact Number', 'Interview Happened'
+        ] + time_slots
+        filtered_data = data[relevant_columns].fillna(0)
         
-        # Ensure time slot values are binary (0 or 1)
+        # Ensure time slot values are binary (1 if available, else 0)
         for slot in time_slots:
             filtered_data[slot] = filtered_data[slot].apply(lambda x: 1 if x == 1 else 0)
         
-        # Filter out candidates who have already had an interview
+        # Filter out candidates who have already been interviewed
         filtered_data = filtered_data[filtered_data['Interview Happened'] == 0]
         
         return filtered_data, time_slots
@@ -40,49 +104,63 @@ def load_data(file_path):
         return None, None
 
 def assign_interview_slots(filtered_data, time_slots, start_date):
-    """Assign interview slots for the whole week including weekends based on availability."""
+    """
+    Assign interview slots for a 7-day window (including weekends).
+    For weekdays, assign interviewers from the weekday_interviewers dictionary.
+    Also, for weekdays, find up to 3 additional attendees (with contact numbers) available in the same slot.
+    """
     schedule = []
     used_slots = {}
-    current_date = start_date
-    end_date = current_date + timedelta(days=6)  # Schedule for 7 days (including weekend)
+    end_date = start_date + timedelta(days=6)  # 7-day window
     
-    # Shuffle the candidates to avoid bias in scheduling
+    # Shuffle candidates to avoid scheduling bias
     shuffled_candidates = filtered_data.sample(frac=1).reset_index(drop=True)
     
-    # Iterate through each candidate
     for index, candidate in shuffled_candidates.iterrows():
         assigned_slot = None
         assigned_date = None
-
-        while not assigned_slot and current_date <= end_date:
-            day_of_week = current_date.strftime("%A")
+        temp_date = start_date
+        
+        # Find an available slot within the 7-day window
+        while not assigned_slot and temp_date <= end_date:
+            day_of_week = temp_date.strftime("%A")
             if day_of_week in ['Saturday', 'Sunday']:
                 available_slots = weekend_time_slots_sat if day_of_week == 'Saturday' else weekend_time_slots_sun
             else:
+                # Use only slots where the candidate is available
                 available_slots = [slot for slot in time_slots if day_of_week in slot and candidate[slot] == 1]
             
             for slot in available_slots:
-                if current_date not in used_slots:
-                    used_slots[current_date] = set()
-                
-                if slot not in used_slots[current_date]:
+                if temp_date not in used_slots:
+                    used_slots[temp_date] = set()
+                if slot not in used_slots[temp_date]:
                     assigned_slot = slot
-                    assigned_date = current_date
+                    assigned_date = temp_date
                     break
             
             if not assigned_slot:
-                current_date += timedelta(days=1)
-
+                temp_date += timedelta(days=1)
+        
         if assigned_slot:
-            # Find up to 3 additional people available in the same slot (only for weekdays)
-            if assigned_date.strftime("%A") not in ['Saturday', 'Sunday']:
+            # For weekdays, assign interviewers based on the provided schedule
+            interviewers_list = []
+            day_of_week = assigned_date.strftime("%A")
+            if day_of_week in weekday_interviewers:
+                # Extract the time portion from the slot string (e.g., "Monday 9:30AM-10:30AM" -> "9:30AM-10:30AM")
+                time_range = assigned_slot.split(" ", 1)[1] if " " in assigned_slot else assigned_slot
+                interviewers_str = weekday_interviewers.get(day_of_week, {}).get(time_range, "")
+                interviewers_list = [x.strip() for x in interviewers_str.split(',')] if interviewers_str else []
+            
+            # For weekdays, find up to 3 additional attendees available in the same slot
+            if day_of_week not in ['Saturday', 'Sunday']:
                 additional_attendees = filtered_data[
                     (filtered_data[assigned_slot] == 1) &
                     (~filtered_data.index.isin([index] + [entry['Interviewee Index'] for entry in schedule]))
                 ].iloc[:3]
             else:
                 additional_attendees = pd.DataFrame()  # No additional attendees on weekends
-
+            
+            # Build the schedule entry including interviewer and additional attendee details
             entry = {
                 "Interviewee Index": index,
                 "Interviewee First Name": candidate["First Name"],
@@ -90,41 +168,45 @@ def assign_interview_slots(filtered_data, time_slots, start_date):
                 "Interviewee Email ID": candidate["Email ID"],
                 "Interviewee Roll Number": candidate["Roll Number"],
                 "Interviewee Department": candidate["Department"],
+                "Interviewee Contact Number": candidate["Contact Number"],
                 "Interview Date": assigned_date,
                 "Interview Time": assigned_slot,
+                "Interviewer 1": interviewers_list[0] if len(interviewers_list) > 0 else None,
+                "Interviewer 2": interviewers_list[1] if len(interviewers_list) > 1 else None,
+                "Interviewer 3": interviewers_list[2] if len(interviewers_list) > 2 else None,
                 "Additional Person 1": None,
                 "Additional Person 1 Email": None,
+                "Additional Person 1 Contact": None,
                 "Additional Person 2": None,
                 "Additional Person 2 Email": None,
+                "Additional Person 2 Contact": None,
                 "Additional Person 3": None,
                 "Additional Person 3 Email": None,
+                "Additional Person 3 Contact": None,
             }
-
-            # Add up to 3 additional attendees to the entry (only for weekdays)
+            
+            # Add up to 3 additional attendees (only for weekdays)
             for i, (_, attendee) in enumerate(additional_attendees.iterrows(), start=1):
                 entry[f"Additional Person {i}"] = f"{attendee['First Name']} {attendee['Last Name']}"
                 entry[f"Additional Person {i} Email"] = attendee["Email ID"]
-
-            # Mark the slot as used for the assigned date
+                entry[f"Additional Person {i} Contact"] = attendee["Contact Number"]
+            
+            # Mark the slot as used on the assigned date
             used_slots[assigned_date].add(assigned_slot)
-
-            # Add the entry to the schedule
+            
+            # Add the entry to the schedule list
             schedule.append(entry)
         else:
             logging.warning(f"Could not schedule interview for {candidate['First Name']} {candidate['Last Name']}")
-
+    
     return pd.DataFrame(schedule)
 
 def save_schedule(schedule_df, output_file):
     """Save the interview schedule to a CSV file."""
     try:
-        # Sort the schedule by date and time
         schedule_df['Interview Date'] = pd.to_datetime(schedule_df['Interview Date'])
         schedule_df = schedule_df.sort_values(['Interview Date', 'Interview Time'])
-        
-        # Remove the temporary 'Interviewee Index' column
         schedule_df = schedule_df.drop(columns=['Interviewee Index'])
-        
         schedule_df.to_csv(output_file, index=False)
         logging.info(f"Schedule saved successfully to {output_file}")
     except Exception as e:
@@ -134,10 +216,8 @@ def save_schedule(schedule_df, output_file):
 if __name__ == "__main__":
     file_path = './test_with_colors.xlsx'
     
-    # Get the current date
+    # Determine the start date: next Monday if today is not Monday
     current_date = datetime.now().date()
-    
-    # If today is not Monday, find the next Monday
     if current_date.weekday() != 0:
         days_until_monday = (7 - current_date.weekday()) % 7
         start_date = current_date + timedelta(days=days_until_monday)
@@ -150,4 +230,4 @@ if __name__ == "__main__":
     if filtered_data is not None:
         schedule_df = assign_interview_slots(filtered_data, time_slots, start_date)
         save_schedule(schedule_df, output_file)
-        print(f"Weekly interview scheduling (including weekend) complete for week starting {start_date}. Check the CSV file and log for details.")
+        print(f"Weekly interview scheduling complete for week starting {start_date}. Check the CSV file and log for details.")
